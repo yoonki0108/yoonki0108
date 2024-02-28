@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.eyesopen"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+    package="com.example.eyesopen">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <queries>
         <intent>
-            <action android:name="android.intent.action.TTS_SERVICE"/>
+            <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
     </queries>
     <queries>
@@ -15,8 +19,12 @@
         </intent>
     </queries>
 
-    <uses-permission android:name="android.permission.INTERNET" tools:remove="android:maxSdkVersion"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" tools:remove="android:maxSdkVersion"/>
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        tools:remove="android:maxSdkVersion" />
 
     <application
         android:allowBackup="true"
@@ -26,19 +34,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EyesOpen">
         <activity
-            android:name=".firstmode"
+            android:name=".TestActivity"
             android:exported="false" />
         <activity
+            android:name=".firstmode"
+            android:exported="true" />
+        <activity
             android:name=".guidebookpage"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".secondmode"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name=".testing"
-            android:exported="false"/>
-
-
+            android:name=".CameraView"
+            android:exported="false" />
         <activity
             android:name=".main"
             android:exported="true">

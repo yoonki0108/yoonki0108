@@ -102,14 +102,6 @@ public class main extends AppCompatActivity {
             }
         });
 
-        button10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(main.this, testing.class);
-                startActivity(i);
-            }
-        });
 
 
         imageView9.setOnClickListener(new View.OnClickListener() {
